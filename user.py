@@ -42,3 +42,24 @@ class User:
                      input("password")):
             return True
         return False
+
+
+    def check_username(self,):
+    
+        """Validating user's username input"""
+        
+        if input("username") == input("name"):
+            return False
+        return True
+    def check_email(self):
+        if re.search(r"(^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$)",
+                     input("email")):
+            return True
+        return False
+
+    def check_age(self):
+
+        if isinstance(input("age"), int) and input("age") > 0:
+            return True
+        return False    
+
