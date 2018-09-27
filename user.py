@@ -51,7 +51,7 @@ class User:
         if input("username") == input("name"):
             return False
 
-           
+        """Validating the email to be in the format of valid emails (johndoe@mail.com)"""    
         return True
     def check_email(self):
         if re.search(r"(^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$)",
