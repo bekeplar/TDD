@@ -50,6 +50,8 @@ class User:
         
         if input("username") == input("name"):
             return False
+
+           
         return True
     def check_email(self):
         if re.search(r"(^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$)",
