@@ -23,26 +23,21 @@ class User:
 
     def check_password(self):
 
-        if len(input("password")) >= 4:
+        
+            
+        g = re.search(r"[a-z]",input("password"))
+            
+        
+        s = re.search(r"[A-Z]", input("password"))
+           
+        t = re.search(r"[0-9]",input("password"))
+          
+        u = re.search(r"[@!#$%^&*()_+=|?/\-~}{;:.<>,]",
+                     input("password"))
+        if None in [g,s,t,u] and len(input("password")) >= 4:
             return True
         return False
-
-        if re.search(r"[a-z]",input("password")):
-            return True
-        return False
-        if re.search(r"[A-Z]", input("password")):
-            return True
-        return False
-
-        if re.search(r"[0-9]",input("password")):
-            return True
-        return False
-
-        if re.search(r"[@!#$%^&*()_+=|?/\-~}{;:.<>,]",
-                     input("password")):
-            return True
-        return False
-
+          
 
     def check_username(self,):
     
@@ -53,6 +48,7 @@ class User:
 
         """Validating the email to be in the format of valid emails (johndoe@mail.com)"""    
         return True
+        
     def check_email(self):
         if re.search(r"(^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$)",
                      input("email")):
